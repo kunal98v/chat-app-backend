@@ -7,7 +7,7 @@ const io = require("socket.io")(server, {
       methods: ["GET", "POST"]
     }
   });
-server.listen(process.env.PORT);
+server.listen('https://chat-app-backend-p71m.onrender.com');
 
 const users = {};
 
