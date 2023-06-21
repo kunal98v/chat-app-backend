@@ -3,7 +3,7 @@ const server = require("http").createServer()
 
 const io = require("socket.io")(server, {
     cors: {
-      origin: process.env.ORIGIN,
+      origin: 'https://stupendous-axolotl-0d3f0d.netlify.app',
       methods: ["GET", "POST"]
     }
   });
