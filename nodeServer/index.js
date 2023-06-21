@@ -3,11 +3,11 @@ const server = require("http").createServer()
 
 const io = require("socket.io")(server, {
     cors: {
-      origin: "http://localhost:5500"|| process.env.ORIGIN,
+      origin: process.env.ORIGIN,
       methods: ["GET", "POST"]
     }
   });
-server.listen(8000 || process.env.PORT);
+server.listen(process.env.PORT);
 
 const users = {};
 
