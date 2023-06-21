@@ -1,5 +1,5 @@
 
-const socket = io()
+const socket = io('')
 
 let btn = document.querySelector(".btn");
 let inputBox = document.querySelector(".inputBox");
