@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    
+}
+body{
+    background:linear-gradient(to left bottom,purple,pink,white) no-repeat;
+    overflow: hidden;
+
+}
+.head{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#name{
+    position: absolute;
+    top:25px;
+    right:15px;
+    font-size: 22px;
+    color: white;
+}
+h1{
+    
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.chatBox{
+    background-color: rgba(255, 255, 255, 0.94);
+    margin: auto;
+    width: 70%;
+    height: 80vh;
+    border: 1px solid black;
+    overflow:auto;
+    border-radius: 20px;
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+    
+}
+
+textarea{
+    width:55%;
+    height: 35px;
+    font-size: 1rem;
+    padding: 5px 5px;
+    border-radius: 20px;
+
+    
+}
+textarea[type = 'text']::placeholder{
+   font-size: 1rem;
+   padding: 5px;
+}
+
+input[type = 'button']{
+    width: 15%;
+    background-color: greenyellow;
+    cursor: pointer;
+    border-radius: 20px;
+
+
+}
+
+.chat{
+    border: 1px solid black;
+    min-width:15%;
+    max-width: 45%;
+    margin: 15px 5px;
+    border-radius: 15px;
+    padding: 10px 5px;
+    overflow-wrap:break-word;
+    min-height: 30px;
+    font-size: 15px;
+    position: relative;
+    
+}
+
+span{
+    font-weight: normal;
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    font-size: 12px;
+}
+.Left{
+    float: left;
+    clear: both;
+    border-top-left-radius:0px ;
+    background-color: aqua;
+    position: relative;
+
+
+}
+.Right{
+    background-color: pink;
+
+    float: right;
+    clear: both;
+    border-top-right-radius: 0px;
+    position: relative;
+
+    
+}
+
+.center{
+    clear: both;
+    text-align: center;
+    color: red;
+}
+
+@media screen and (max-width:600px) {
+    
+    .chatBox{
+        width: 90%;
+    }
+
+    textarea{
+        width: 60%;
+    }
+
+    input[type = 'button']{
+        width: 30%;
+    }
+    #name{
+        width: 93%;
+        top: 5px;
+        text-align: center;
+        height: 25px;
+    }
+}
