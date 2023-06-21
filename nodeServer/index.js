@@ -3,11 +3,11 @@ const server = require("http").createServer()
 
 const io = require("socket.io")(server, {
     cors: {
-      origin: process.env.ORIGIN,
+      origin: 'https://chat-app-backend-p71m.onrender.com',
       methods: ["GET", "POST"]
     }
   });
-server.listen('https://chat-app-backend-p71m.onrender.com');
+server.listen(process.env.PORT);
 
 const users = {};
 
