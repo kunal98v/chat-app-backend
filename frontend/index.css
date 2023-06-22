@@ -117,6 +117,7 @@ span{
     
     .chatBox{
         width: 90%;
+        max-height:500px;
     }
 
     textarea{
