@@ -3,7 +3,7 @@ const server = require("http").createServer()
 
 const io = require("socket.io")(server, {
     cors: {
-      origin: 'https://gentle-travesseiro-535e36.netlify.app',
+      origin: 'https://chat-app47.netlify.app',
       methods: ["GET", "POST"]
     }
   });
