@@ -1,5 +1,5 @@
 
-const socket = io()
+const socket = io('https://chat-app-backend-p71m.onrender.com')
 
 let btn = document.querySelector(".btn");
 let inputBox = document.querySelector(".inputBox");
