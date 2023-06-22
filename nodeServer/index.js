@@ -3,11 +3,11 @@ const server = require("http").createServer()
 
 const io = require("socket.io")(server, {
     cors: {
-      origin: 'https://gentle-travesseiro-535e36.netlify.app/',
+      origin: 'https://gentle-travesseiro-535e36.netlify.app',
       methods: ["GET", "POST"]
     }
   });
-server.listen(process.env.PORT);
+server.listen(process.env.PORT || 8000);
 
 const users = {};
 
