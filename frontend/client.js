@@ -11,6 +11,8 @@ var audio = new Audio('ting.mp3')
 let namee;
 do{
     namee = prompt("enter your name");
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+
 
 
 }while(!namee)
@@ -23,7 +25,6 @@ socket.emit('new-user-joined',namee);
 function append(name,msg,position){
 
    
-    var randomColor = Math.floor(Math.random()*16777215).toString(16);
      
     let div = document.createElement('div');
       if(position == "Right"){
