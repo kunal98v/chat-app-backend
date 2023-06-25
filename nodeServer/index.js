@@ -17,9 +17,9 @@ const users = {
 
 io.on('connection',socket=>{
     socket.on('new-user-joined',name=>{
-        users[id] = socket.id;
-        users[name] = name;
-        users[color] = Math.floor(Math.random()*16777215).toString(16);
+        users.id = socket.id;
+        users.name = name;
+        users.color = Math.floor(Math.random()*16777215).toString(16);
         console.log(users);
         socket.broadcast.emit('user-joined',name);
 
@@ -33,8 +33,8 @@ io.on('connection',socket=>{
     });
     
     socket.on('disconnect',message=>{
-      socket.broadcast.emit('left',users[socket.id])
-      delete users[socket.id]
+      socket.broadcast.emit('left',users.id)
+      delete users.id
     });
     
     
