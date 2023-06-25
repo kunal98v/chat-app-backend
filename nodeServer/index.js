@@ -9,12 +9,13 @@ const io = require("socket.io")(server, {
   });
 server.listen(process.env.PORT || 8000);
 
-const users = {};
+const users = {
+};
 
 io.on('connection',socket=>{
     socket.on('new-user-joined',name=>{
         users[socket.id] = name;
-        users['color'] = Math.floor(Math.random()*16777215).toString(16);
+        users[socket.id] = Math.floor(Math.random()*16777215).toString(16);
         console.log(users);
         socket.broadcast.emit('user-joined',name);
 
@@ -23,7 +24,7 @@ io.on('connection',socket=>{
 
     socket.on('send',message=>{
 
-      socket.broadcast.emit('receive',{message:message,name:users[socket.id],color:users['color']});
+      socket.broadcast.emit('receive',{message:message,name:users[socket.id],"red"});
         
     });
     
