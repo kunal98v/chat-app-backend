@@ -18,7 +18,10 @@ do{
 getName.innerText = `Welcome ${namee}`;
 socket.emit('new-user-joined',namee);
 
-var randomColor = Math.floor(Math.random()*16777215).toString(16);
+function changeColor(){
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+}
 
 function append(name,msg,position){
 
@@ -26,7 +29,7 @@ function append(name,msg,position){
     let div = document.createElement('div');
       if(position == "Right"){
         audio.play()
-        div.style.backgroundColor = randomColor;
+        div.style.backgroundColor = changeColor();
     }
 
     div.classList.add('chat')
