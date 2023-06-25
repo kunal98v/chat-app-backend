@@ -18,14 +18,14 @@ do{
 getName.innerText = `Welcome ${namee}`;
 socket.emit('new-user-joined',namee);
 
-function changeColor(){
-    var randomColor = Math.floor(Math.random()*16777215).toString(16);
-    return randomColor;
-}
+
 
 function append(name,msg,position){
 
-    
+    function changeColor(){
+        var randomColor = Math.floor(Math.random()*16777215).toString(16);
+        return randomColor;
+    }
     let div = document.createElement('div');
       if(position == "Right"){
         audio.play()
