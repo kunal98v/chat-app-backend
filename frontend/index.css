@@ -91,13 +91,11 @@ span{
     float: left;
     clear: both;
     border-top-left-radius:0px ;
-    background-color: aqua;
     position: relative;
 
 
 }
 .Right{
-    background-color: pink;
 
     float: right;
     clear: both;
