@@ -14,7 +14,7 @@ const users = {};
 io.on('connection',socket=>{
     socket.on('new-user-joined',name=>{
         users[socket.id] = name;
-        users.push['color'] = Math.floor(Math.random()*16777215).toString(16);
+        users['color'] = Math.floor(Math.random()*16777215).toString(16);
         console.log(users);
         socket.broadcast.emit('user-joined',name);
 
