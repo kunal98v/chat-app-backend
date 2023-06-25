@@ -26,7 +26,7 @@ function append(name,msg,position){
     let div = document.createElement('div');
       if(position == "Right"){
         audio.play()
-        div.style.backgroundColor = "red";
+        div.style.backgroundColor = randomColor;
     }
 
     div.classList.add('chat')
