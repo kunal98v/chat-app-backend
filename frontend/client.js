@@ -24,13 +24,14 @@ function append(name,msg,position){
 
     
     let div = document.createElement('div');
-    div.classList.add('chat')
-    div.classList.add(position)
-     if(position == "Right"){
+      if(position == "Right"){
         audio.play()
-        div.style.backgroundColor = randomColor;
+        div.style.backgroundColor = "red";
     }
 
+    div.classList.add('chat')
+    div.classList.add(position)
+   
     div.innerHTML = `<b>${name}</b> : ${msg}`;
 
     var time = new Date();
