@@ -22,14 +22,13 @@ socket.emit('new-user-joined',namee);
 
 function append(name,msg,position){
 
-    function changeColor(){
-        var randomColor = Math.floor(Math.random()*16777215).toString(16);
-        return randomColor;
-    }
+   
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+     
     let div = document.createElement('div');
       if(position == "Right"){
         audio.play()
-        div.style.backgroundColor = changeColor();
+        div.style.backgroundColor = randomColor
     }
 
     div.classList.add('chat')
