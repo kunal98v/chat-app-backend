@@ -30,10 +30,9 @@ function append(name,msg,position,color){
     div.style.backgroundColor = color;
      if(position == "Right"){
         audio.play()
-        div.style.backgroundColor = "#00FF00";
+        div.style.backgroundColor = color;
     }
 
-    console.log(name,msg)
     div.innerHTML = `<b>${name}</b> : ${msg}`;
 
     var time = new Date();
