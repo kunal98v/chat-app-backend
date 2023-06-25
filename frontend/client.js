@@ -72,7 +72,7 @@ socket.on('left',name=>{
     div.classList.add('center')
     chatBox.appendChild(div)
     chatBox.scrollTop = chatBox.scrollHeight;
-})
+});
 
 btn.addEventListener('click',(e)=>{
     e.preventDefault();
