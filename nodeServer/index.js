@@ -28,7 +28,7 @@ io.on('connection',socket=>{
 
     socket.on('send',message=>{
 
-      socket.broadcast.emit('receive',{message:message,name:users.name,id:users.id});
+      socket.broadcast.emit('receive',{message:message,name:users.name,id:users.id,color:users.color});
         
     });
     
