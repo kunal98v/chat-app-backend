@@ -18,13 +18,15 @@ getName.innerText = `Welcome ${namee}`;
 socket.emit('new-user-joined',namee);
 
 
-function append(name,msg,position){
+function append(name,msg,position,color){
+
+    
+    let div = document.createElement('div');
 
     if(position == "Right"){
         audio.play()
-
+        div.style.backgroundColor = "#00FF00";
     }
-    let div = document.createElement('div');
 
     div.classList.add('chat')
     div.classList.add(position)
@@ -59,7 +61,7 @@ socket.on('user-joined',(name) =>{
 
 
 socket.on('receive',data=>{
-    append(data.name,data.message,"Right");
+    append(data.name,data.message,"Right",data.color);
     
 
 });
