@@ -17,7 +17,6 @@ io.on('connection',socket=>{
         console.log(users);
         socket.broadcast.emit('user-joined',name); 
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
-    });
 
     socket.on('send',message=>{
         socket.broadcast.emit('receive',{message:message,name:users[socket.id],color:randomColor});
