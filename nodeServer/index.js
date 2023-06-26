@@ -9,28 +9,19 @@ const io = require("socket.io")(server, {
   });
 server.listen(process.env.PORT || 8000);
 
-const users = {
-    id:"" , 
-    name:"" ,
-    color:""
-};
-
+const users = { }
 io.on('connection',socket=>{
-    socket.on('new-user-joined',name=>{
-        users.id = socket.id;
-        users.name = name;
-        users.color = Math.floor(Math.random()*16777215).toString(16);
+     socket.on('new-user-joined',name=>{
+        users[socket.id] = name;
         console.log(users);
         socket.broadcast.emit('user-joined',name);
-
-
+      
          });
-
-    socket.on('send',message=>{
-
-      socket.broadcast.emit('receive',{message:message,name:users.name,id:users.id,color:users.color});
-        
+    
+socket.on('send',message=>{
+        socket.broadcast.emit('receive',{message:message,name:users[socket.id]})
     });
+
     
     socket.on('disconnect',message=>{
       socket.broadcast.emit('left',users.id)
