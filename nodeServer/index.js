@@ -24,7 +24,7 @@ socket.on('send',message=>{
 
     
     socket.on('disconnect',message=>{
-      socket.broadcast.emit('left',users.id)
+      socket.broadcast.emit('left',users[socket.id])
       delete users.id
     });
     
