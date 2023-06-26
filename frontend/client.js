@@ -21,14 +21,13 @@ socket.emit('new-user-joined',namee);
 
 
 
-function append(name,msg,position,color){
+function append(name,msg,position){
 
    
      
     let div = document.createElement('div');
       if(position == "Right"){
         audio.play()
-        div.style.backgroundColor = "#" +color ;
     }
 
     div.classList.add('chat')
@@ -64,7 +63,7 @@ socket.on('user-joined',(name) =>{
 
 
 socket.on('receive',data=>{
-    append(data.name,data.message,"Right",data.color);
+    append(data.name,data.message,"Right");
     
 
 });
@@ -80,13 +79,13 @@ socket.on('left',name=>{
 btn.addEventListener('click',(e)=>{
     e.preventDefault();
     socket.emit('send',inputBox.value)
-    append("You",inputBox.value,"Left","aqua")  
+    append("You",inputBox.value,"Left")  
 });
 inputBox.addEventListener('keydown',(e)=>{
     if(e.key === "Enter"){
         e.preventDefault();
         socket.emit('send',inputBox.value)
-        append("You",inputBox.value,"Left","aqua")  
+        append("You",inputBox.value,"Left")  
     }
     
 });
